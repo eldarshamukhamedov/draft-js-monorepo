@@ -1,0 +1,40 @@
+{
+  "name": "@eldarshamukhamedov/draft-js-react-native",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Eldar Shamukhamedov",
+  "license": "UNLICENSED",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "BROWSER=none expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  },
+  "dependencies": {
+    "expo": "36.0.2",
+    "expo-asset": "~8.0.0",
+    "expo-asset-utils": "1.2.0",
+    "expo-file-system": "~8.0.0",
+    "expo-font": "~4.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native-screens": "2.0.0-alpha.22",
+    "react-native-web": "~0.11.7",
+    "react-native-webview": "8.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.7",
+    "@types/react": "16.9.17",
+    "@types/react-native": "0.60.28",
+    "babel-preset-expo": "8.0.0",
+    "typescript": "3.7.4"
+  }
+}
