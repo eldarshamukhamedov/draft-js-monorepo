@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "core/*": ["./source/core/*"],
+      "types/*": ["./types/*"],
+    }
+  },
+  "include": ["source/**/*", "types/*.ts"],
+  "exclude": ["node_modules", "build", "dist"]
+}

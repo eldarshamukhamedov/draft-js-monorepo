@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist/",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "es6",
+    "paths": {
+      "core/*": ["./source/core/*"],
+      "types/*": ["./types/*"]
+    },
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types",
+      "../../node_modules/@types"
+    ]
+  },
+  "include": ["source/**/*", "types/*.ts"],
+  "exclude": ["node_modules", "build", "dist"]
+}

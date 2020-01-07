@@ -1,0 +1,103 @@
+{
+  "private": true,
+  "name": "@eldarshamukhamedov/draft-js-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Eldar Shamukhamedov",
+  "license": "UNLICENSED",
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 ios versions"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "extends": "@eldarshamukhamedov/draft-js-eslint-config",
+    "parser": "babel-eslint",
+    "globals": {
+      "PUBLIC_PATH": "readonly",
+      "PACKAGE_VERSION": "readonly",
+      "NODE_ENV": "readonly",
+      "cy": "readonly",
+      "Cypress": "readonly"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts",
+            ".tsx",
+            ".js",
+            ".jsx"
+          ],
+          "paths": [
+            "./",
+            "./source",
+            "./packages/core",
+            "./packages/core/source"
+          ]
+        }
+      }
+    }
+  },
+  "eslintIgnore": [
+    "build",
+    "dist",
+    "coverage",
+    "**/node_modules"
+  ],
+  "jest": {
+    "setupFiles": [
+      "<rootDir>config/jest/setupEnzyme.js",
+      "<rootDir>config/jest/mocks.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/source/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/source/**/*.d.ts",
+      "!<rootDir>/source/**/__tests__/**/*.{js,jsx,ts,tsx}"
+    ],
+    "testURL": "http://localhost:8080",
+    "modulePaths": [
+      "<rootDir>/",
+      "<rootDir>/source"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "testMatch": [
+      "<rootDir>/source/**/__tests__/**/*.test.{js,jsx,ts,tsx}"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "babel-jest",
+      "^.+\\.(css|scss)$": "<rootDir>/config/jest/cssTransform.js",
+      "^.+\\.(svg)$": "<rootDir>/config/jest/fileTransform.js",
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "lodash": "4.17.14",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "styled-components": "4.3.2",
+    "uuid": "3.3.2"
+  },
+  "devDependencies": {
+    "@types/enzyme": "3.10.4",
+    "@types/jest": "24.0.25",
+    "@types/lodash": "4.14.149",
+    "@types/react": "16.9.17",
+    "@types/react-dom": "16.9.4",
+    "@types/styled-components": "4.4.2",
+    "@types/webpack-env": "1.15.0",
+    "typescript": "3.7.4"
+  }
+}
